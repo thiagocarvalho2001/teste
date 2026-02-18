@@ -6,6 +6,6 @@
         $result = $number + $number2;
         echo "The result of adding $number and $number2 is: $result";
     } else {
-        echo "Both values must be numeric.";
+        echo "Both values fafasfafa be numeric.";
     }
 ?>
