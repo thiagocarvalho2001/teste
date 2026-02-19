@@ -1,9 +1,5 @@
 pipeline {
-    agent{
-        docker{
-            image 'node:20-alpine'
-        }
-    }
+    agent any
 
     stages{
         stage('Preparação'){
@@ -12,11 +8,12 @@ pipeline {
             }
         }
         stage('Testando o ambiente'){
-            steps{
-                sh 'node -v'
-                sh 'npm -v'
-                sh 'echo "Hello, World!"'
-                sh 'echo "Testando o ambiente de desenvolvimento..."'
+            steps {
+                bat 'docker run --rm node:20-alpine node --version'
+                
+                bat 'docker run --rm node:20-alpine npm --version'
+                
+                echo 'Uau! Isso rodou usando um Node do Docker, sem precisar do Node do Windows!'
             }
         }
     }
