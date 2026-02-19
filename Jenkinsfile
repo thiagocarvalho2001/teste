@@ -16,6 +16,7 @@ pipeline {
                 sh 'node -v'
                 sh 'npm -v'
                 sh 'echo "Hello, World!"'
+                sh 'echo "Testando o ambiente de desenvolvimento..."'
             }
         }
     }
